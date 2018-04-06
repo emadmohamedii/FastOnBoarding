@@ -44,12 +44,22 @@ class ViewController: UIViewController {
     onboardingView.foImages = imageViewArray
     onboardingView.animateType = .oglFlip
     onboardingView.foDiriction = .horizantal
+    onboardingView.delegate = self //For delegate
     onboardingView.startOnboarding()
   }
 
   let imageViewArray : [UIImage]? = [#imageLiteral(resourceName: "image1"),#imageLiteral(resourceName: "image2"),#imageLiteral(resourceName: "image3")]
 }
 
+```
+## Delegate
+You shold use protocol to get the page control count 
+
+```swift
+
+func FOnboarding(_ foView: FOView, getCountPageControl: Int) {
+    print(getCountPageControl)
+}
 
 ```
 
